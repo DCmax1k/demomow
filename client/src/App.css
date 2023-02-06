@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap'); /* font-family: 'Comfortaa', cursive; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  min-height: 860px;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right bottom, #111111, #656565);
+  font-family: 'Comfortaa', cursive;
+}
+
+.ColoredBorderButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ColoredBorderButton > h2 {
+  font-weight: 700;
+}

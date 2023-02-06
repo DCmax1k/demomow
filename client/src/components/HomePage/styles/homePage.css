@@ -1,0 +1,79 @@
+.HomePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.title {
+    width: 500px;
+}
+
+.buttons {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleImages {
+    position: absolute;
+    top: 200px;
+    padding: 20px;
+    width: 450px;
+    height: 600px;
+}
+.treeImages {
+    right: 20px;
+}
+.mowImages {
+    left: 20px;
+}
+
+.frontImage {
+    position: absolute;
+    border-radius: 8%;
+    overflow: hidden;
+    box-shadow: -5px 5px 15px 2px rgb(17, 17, 17);
+}
+.frontImage.a {
+    height: 65%;
+    width: 65%;
+    left: 0;
+}
+.treeImages > .frontImage.a {
+    bottom: 0;
+}
+.mowImages > .frontImage.a {
+    top: 0;
+}
+
+.frontImage.b {
+    height: 50%;
+    width: 50%;
+    right: 0;
+}
+.treeImages > .frontImage.b {
+    top: 0;
+}
+.mowImages > .frontImage.b {
+    bottom: 0;
+}
+
+.frontImage > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 61, 18);
+    opacity: 0.2;
+}
