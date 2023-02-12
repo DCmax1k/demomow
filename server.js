@@ -18,7 +18,12 @@ app.use(cookieParser());
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/client/build/index.html");
 });
-
+app.get('/mow', (req, res) => {
+    res.sendFile(__dirname + "/client/build/index.html");
+});
+app.get('/tree', (req, res) => {
+    res.sendFile(__dirname + "/client/build/index.html");
+});
 // Routes
 
 // Server port

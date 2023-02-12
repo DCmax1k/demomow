@@ -15,14 +15,68 @@
   left: 0;
   background-image: linear-gradient(to right bottom, #111111, #656565);
   font-family: 'Comfortaa', cursive;
+  z-index: -1;
 }
 
 .ColoredBorderButton {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(58, 58, 58, 0.836);
 }
 
 .ColoredBorderButton > h2 {
   font-weight: 700;
+}
+
+.Input {
+  position: relative;
+  width: 100%;
+  height: 50px; 
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.Input > input, .Input.TextArea > textarea {
+  border: none;
+  outline: none;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  padding: 0 5px;
+  transform: translateY(-50%);
+  color: rgb(196, 196, 196);
+  font-size: 18px;
+  width: calc(100% - 15px);
+}
+
+.Input > .placeholder {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #6C6C6C;
+  padding: 0 5px;
+  font-size: 18px;
+  transition: font-size 0.3s ease, top 0.3s ease;
+  pointer-events: none;
+}
+.Input > .placeholder.active {
+  font-size: 12px !important;
+  top: 0px !important;
+}
+
+.Input.TextArea {
+  height: 100px;
+}
+
+.Input.TextArea > textarea {
+  height: 95% !important;
+  width: 95% !important;
+  padding: 10px 5px;
+}
+
+.Input.TextArea > .placeholder {
+  top: 25px;
 }

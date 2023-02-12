@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles/homePage.css';
 
 import ColoredBorderButton from '../ColoredBorderButton';
+import { Link } from 'react-router-dom';
 
 class HomePage extends Component {
     constructor(props) {
@@ -26,20 +27,24 @@ class HomePage extends Component {
                 
                 <img alt='title' className='title' src='/title.svg' />
 
-                <h3 style={{color: '#DBDBDB', fontWeight: 300, fontSize: 25, marginTop: 20, marginBottom: 5}}>Tree Demolition and Mowing</h3>
+                <h3 className='subTitle'>Tree Demolition and Mowing</h3>
 
-                <img alt='hr' src='/hrBoth.svg' />
+                <img className='titleHr' alt='hr' src='/hrBoth.svg' />
 
                 <div className='buttons'>
-                    <ColoredBorderButton color="red" onClick={() => this.toggleForm('mow')}>
-                        Get Your Lawn Mowed
-                    </ColoredBorderButton>
+                    <Link className='link' to={'/mow'} style={{textDecoration: "none"}} >
+                        <ColoredBorderButton color="red">
+                            Get Your Lawn Mowed
+                        </ColoredBorderButton>
+                    </Link>
 
                     <h4 style={{marginTop: 30, marginBottom: 30, color: '#B4B4B4'}}>------- or -------</h4>
 
-                    <ColoredBorderButton color="blue" onClick={() => this.toggleForm('tree')}>
-                        Remove Tree(s)
-                    </ColoredBorderButton>
+                    <Link className='link' to={'/tree'} style={{textDecoration: "none"}} >
+                        <ColoredBorderButton color="blue">
+                            Remove Tree(s)
+                        </ColoredBorderButton>
+                    </Link>
                 </div>
 
                 <div className='treeImages titleImages'>

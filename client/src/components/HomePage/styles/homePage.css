@@ -10,17 +10,26 @@
     width: 500px;
 }
 
+.subTitle {
+    color: #DBDBDB;
+    font-weight: 300;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
 .buttons {
     margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 1;
 }
 
 .titleImages {
     position: absolute;
-    top: 200px;
+    top: 190px;
     padding: 20px;
     width: 450px;
     height: 600px;
@@ -30,6 +39,24 @@
 }
 .mowImages {
     left: 20px;
+}
+
+.titleImages::before, .titleImages::after {
+    content: '';
+    background-color: #373737;
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    left: 0;
+    border-radius: 30px;
+}
+.titleImages::before {
+    top: 5%;
+}
+.titleImages::after {
+    bottom: 5%;
+    position: absolute;
+    z-index: -1;
 }
 
 .frontImage {
@@ -52,7 +79,7 @@
 
 .frontImage.b {
     height: 50%;
-    width: 50%;
+    width: 60%;
     right: 0;
 }
 .treeImages > .frontImage.b {
@@ -76,4 +103,90 @@
     width: 100%;
     background-color: rgb(0, 61, 18);
     opacity: 0.2;
+}
+
+.textCheck {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    width: 70px;
+    cursor: pointer;
+}
+
+.textCheck > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+
+
+@media screen and (max-width: 1040px) {
+    .title {
+        width: 400px;
+    }
+
+    .subTitle {
+        font-size: 20px;
+    }
+
+    .titleImages {
+        top: 260px;
+        width: 300px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .App {
+        overflow: hidden;
+    }
+    .treeImages {
+        right: unset;
+        left: 60%;
+    }
+    .mowImages {
+        left: unset;
+        right: 60%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .title {
+        width: 95%;
+    }
+    .titleHr {
+        width: 90%;
+    }
+    .subTitle {
+        font-size: 5vw;
+    }
+    .buttons {
+        width: 90%;
+    }
+    .ColoredBorderButton {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .buttons > .link {
+        width: 100% !important;
+        height: 20vw !important;
+    }
+    .buttons > .link > .ColoredBorderButton > h2 {
+        font-size: 5vw !important;
+    }
+    .treeImages {
+        right: unset;
+        left: 52%;
+    }
+    .mowImages {
+        left: unset;
+        right: 52%;
+    }
+    .buttons > h4 {
+        font-size: 4vw;
+    }
 }
